@@ -1,44 +1,81 @@
-const listaPosts = [
+const listaAnimais = [
   {
-    titulo: "Lorem ipsum dolor sit amet.",
-    descricao:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam nisl, dapibus quis dictum quis, facilisis non risus. Aliquam tempor nisi id lacinia lobortis. Donec in justo mauris. Mauris luctus tristique est, a faucibus elit. Vivamus et dapibus mi, id facilisis nunc. Etiam feugiat, sapien sed pharetra sagittis, risus sapien semper tortor, iaculis viverra diam augue eget odio. Nullam sit amet massa non nunc finibus rhoncus eu id elit. Nam ut tincidunt nisl. Duis consequat hendrerit metus id fermentum. Integer risus massa, fermentum lacinia pellentesque vel, congue nec ex. Etiam et tincidunt urna. Donec dolor justo, vehicula eu tincidunt id, eleifend eu leo. Donec eu dolor sapien. Maecenas et accumsan dolor, eget placerat massa.",
-    imgURL: "./img/img1.jpg",
+    nome: "Bananilson Farofa",
+    sexo: "Macho",
+    descricao: "Foi resgatado após ser encontrado entupido de farofa em uma casa no Rio Grande do Norte",
+    imgURL: "./img/bananilson-farofa.png",
   },
   {
-    titulo: "Lorem ipsum dolor sit amet.",
-    descricao:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam nisl, dapibus quis dictum quis, facilisis non risus. Aliquam tempor nisi id lacinia lobortis. Donec in justo mauris. Mauris luctus tristique est, a faucibus elit. Vivamus et dapibus mi, id facilisis nunc. Etiam feugiat, sapien sed pharetra sagittis, risus sapien semper tortor, iaculis viverra diam augue eget odio. Nullam sit amet massa non nunc finibus rhoncus eu id elit. Nam ut tincidunt nisl. Duis consequat hendrerit metus id fermentum. Integer risus massa, fermentum lacinia pellentesque vel, congue nec ex. Etiam et tincidunt urna. Donec dolor justo, vehicula eu tincidunt id, eleifend eu leo. Donec eu dolor sapien. Maecenas et accumsan dolor, eget placerat massa.",
-    imgURL: "./img/img2.jpg",
+    nome: "John Cena",
+    sexo: "Macho",
+    descricao: "Foi resgatado de um fundo de padaria onde era realizado rinhas de animais domésticos",
+    imgURL: "./img/John-Cena.png",
   },
   {
-    titulo: "Lorem ipsum dolor sit amet.",
-    descricao:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam nisl, dapibus quis dictum quis, facilisis non risus. Aliquam tempor nisi id lacinia lobortis. Donec in justo mauris. Mauris luctus tristique est, a faucibus elit. Vivamus et dapibus mi, id facilisis nunc. Etiam feugiat, sapien sed pharetra sagittis, risus sapien semper tortor, iaculis viverra diam augue eget odio. Nullam sit amet massa non nunc finibus rhoncus eu id elit. Nam ut tincidunt nisl. Duis consequat hendrerit metus id fermentum. Integer risus massa, fermentum lacinia pellentesque vel, congue nec ex. Etiam et tincidunt urna. Donec dolor justo, vehicula eu tincidunt id, eleifend eu leo. Donec eu dolor sapien. Maecenas et accumsan dolor, eget placerat massa.",
-    imgURL: "./img/img3.jpg",
+    nome: "Princesa",
+    sexo: "Femea",
+    descricao: "Nascida no abrigo, filha do Bananilson Farofa e da Serja",
+    imgURL: "./img/princesa.png",
   },
   {
-    titulo: "Lorem ipsum dolor sit amet.",
-    descricao:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam nisl, dapibus quis dictum quis, facilisis non risus. Aliquam tempor nisi id lacinia lobortis. Donec in justo mauris. Mauris luctus tristique est, a faucibus elit. Vivamus et dapibus mi, id facilisis nunc. Etiam feugiat, sapien sed pharetra sagittis, risus sapien semper tortor, iaculis viverra diam augue eget odio. Nullam sit amet massa non nunc finibus rhoncus eu id elit. Nam ut tincidunt nisl. Duis consequat hendrerit metus id fermentum. Integer risus massa, fermentum lacinia pellentesque vel, congue nec ex. Etiam et tincidunt urna. Donec dolor justo, vehicula eu tincidunt id, eleifend eu leo. Donec eu dolor sapien. Maecenas et accumsan dolor, eget placerat massa.",
-    imgURL: "./img/img4.webp",
+    nome: "Elon Musk",
+    sexo: "Macho",
+    descricao: "Foi resgatado de uma agencia aero-espacial, onde seria usada como cão-astronauta, oque configurou maus-tratos e então foi recolhido para o abrigo, é muito inteligente",
+    imgURL: "./img/elon-musk.png",
   },
-];
+  {
+    nome: "Serja",
+    sexo: "Femea",
+    descricao: "Foi tirada de seus antigos tutores por causa de maus-tratos, ela estava obesa e com danos na coluna, agora está saudável e pronta para um lar definitivo!",
+    imgURL: "./img/basset.png",
+  },
+  {
+    nome: "Quack",
+    sexo: "Macho",
+    descricao: "Foi encontrado dentro de um bueiro no Jardim El Dorado, e trazido para o abrigo para receber os cuidados, é um pato manso e bem brincalhão",
+    imgURL: "./img/quack.png",
+  },
+  {
+    nome: "Salsichão",
+    sexo: "Macho",
+    descricao: "Apareceu na frente do abrigo vestindo uma fantasia de cachorro quente, seus donos nunca vieram o buscar.",
+    imgURL: "./img/cachorro-quente.png",
+  },
+  {
+    nome: "Scar",
+    sexo: "Macho",
+    descricao: "Foi resgatado após ser atacado brutalmente por um grupo de galinhas",
+    imgURL: "./img/scar.png",
+  },
+  {
+    nome: "Caramelo",
+    sexo: "Macho",
+    descricao: "Apareceu na frente da casa de um dos administradores do abrigo pedindo comida",
+    imgURL: "./img/caramelo.png",
+  }
 
-let container = document.querySelector(".container");
+]
+
+let colunas_card = document.querySelector(".colunas_card");
 
 const criacaoPosts = () => {
-  listaPosts.forEach((post) => {
-    let card = `   
-            <div class="card">
-                <img class="card-img" src=${post.imgURL} /> 
-                <h2 class="card-titulo"> ${post.titulo} </h2>
-                <p class="card-descricao"> ${post.descricao} </p>
-            </div>
-        `;
-    container.innerHTML += card;
+  listaAnimais.forEach((post) => {
+    let card =
+      `
+        <div class="card col-lg-3 col-12 d-flex flex-column">
+          <img src=${post.imgURL} class="card-img-top" alt=""/>
+          <div class="card-body d-flex flex-column justify-content-center">
+            <h5 class="card-title text-center">${post.nome}</h5>
+            <h6 class="card-sexo text-center">${post.sexo}</h6>
+            <p class="card-text">${post.descricao}</p>
+            <a href="#" class="btn btn-primary">Entre em contato</a>
+          </div>
+        </div>
+    `;
+    colunas_card.innerHTML += card;
   });
 };
+
 
 window.onload = () => {
   criacaoPosts();
