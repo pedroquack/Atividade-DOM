@@ -111,13 +111,13 @@ window.onload = () => {
   criacaoPosts();
   slider_tema.addEventListener("click", () => {
     let cards = document.querySelectorAll(".card");
-
     cards.forEach((card) => {
       if (slider_tema.checked) {
         card.classList.add("card-dark");
       } else {
         card.classList.remove("card-dark")
       }
+      
     });
   });
 };
