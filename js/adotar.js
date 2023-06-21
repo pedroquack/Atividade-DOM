@@ -1,6 +1,6 @@
 let formulario = document.querySelector("form")
 
-const check_inputs = (nome, telefone, email) => {
+const check_inputs = (nome, telefone, email,renda,residencia,intencao) => {
     let control = true;
     if (nome.value.trim() == "") {
         nome.classList.add("erro");
@@ -20,7 +20,6 @@ const check_inputs = (nome, telefone, email) => {
     }else{
         email.classList.remove("erro");
     }
-
     return control;
 }
 
