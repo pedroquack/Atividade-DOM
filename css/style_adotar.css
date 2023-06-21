@@ -1,3 +1,10 @@
 .erro{
     background-color: rgba(255, 0, 0, 0.5);
 }
+.container{
+    padding: 20px;
+    transition: ease 0.5s;
+    background-color: rgb(250, 235, 247);
+    border: 2px dashed rgb(226, 133, 222);
+    box-shadow: 0px 2px 5px 3px rgba(255,105,255,0.4);
+}

@@ -77,7 +77,7 @@ const criacaoPosts = () => {
             <h5 class="card-title text-center">${post.nome}</h5>
             <h6 class="card-sexo text-center">${post.sexo}</h6>
             <p class="card-text">${post.descricao}</p>
-            <a href="http://127.0.0.1:5500/adotar.html" class="botao btn btn-primary idAnimal="${post.id}">Entre em contato</a>
+            <a href="#" class="botao btn btn-primary" id_animal="${post.id}">Entre em contato</a>
           </div>
         </div>
     `;
@@ -96,8 +96,15 @@ window.onload = () => {
       } else {
         card.classList.remove("card-dark")
       }
-      
+      let card_body = card.lastElementChild;
+      console.log(card_body);
+      card_body.lastElementChild.addEventListener("click",(event) => {
+        event.preventDefault();
+        sessionStorage.setItem("id_animal", card_body.lastElementChild.getAttribute("id_animal"))
+        window.location.href = "../adotar.html"
+      })
     });
+
   });
 };
 
