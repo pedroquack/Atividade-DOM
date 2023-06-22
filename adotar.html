@@ -49,47 +49,58 @@
     </header>
     <main>
         <div class="container">
-            <form action="https://formsubmit.co/pedrovolpattocosta@gmail.com" method="post" class="d-flex flex-column align-items-center justify-content-center">
-                <div class="form_item">
-                    <label for="nome">Nome: </label>
-                    <input type="text" name="nome" id="nome">
-                </div>
-                <div class="form_item">
-                    <label for="telefone">Telefone: </label>
-                    <input type="number" name="telefone" id="telefone">
-                </div>
-                <div class="form_item">
-                    <label for="email">E-Mail: </label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="form_item">
-                    <span>Informe o que mais se encaixa com sua renda: </span>
-                    <div class="form_item_radio">
-                        <input type="radio" name="renda" id="renda1000" value="1000">
-                        <label for="renda1000">Até R$ 1000,00</label>
+            <h1 class="titulo_form text-center">QUASE LÁ!</h1>
+            <h2 class="subtitulo_form text-center">PRECISAMOS DE MAIS INFORMAÇÕES</h2>
+            <form action="https://formsubmit.co/pedrovolpattocosta@gmail.com" method="post"
+                class="d-flex flex-column align-items-center justify-content-center">
+                <div class="row form_cima">
+                    <div class="form_esquerda col-lg-6 col-12 d-flex flex-column p-3">
+                        <div class="form_item">
+                            <label for="nome">Nome: </label>
+                            <input type="text" name="nome" id="nome">
+                        </div>
+                        <div class="form_item">
+                            <label for="telefone">Telefone: </label>
+                            <input type="number" name="telefone" id="telefone">
+                        </div>
+                        <div class="form_item">
+                            <label for="email">E-Mail: </label>
+                            <input type="email" name="email" id="email">
+                        </div>
                     </div>
-                    <div class="form_item_radio">
-                        <input type="radio" name="renda" id="renda2000" value="2000">
-                        <label for="renda2000">Até R$ 2000,00</label>
-                    </div>
-                    <div class="form_item_radio">
-                        <input type="radio" name="renda" id="renda5000" value="5000">
-                        <label for="renda5000">Até R$ 5000,00 ou mais</label>
+                    <div class="form_direita col-lg-6 col-12 p-3">
+                        <div class="form_item">
+                            <span>Informe o que mais se encaixa com sua renda: </span>
+                            <div class="form_item_radio">
+                                <input type="radio" name="renda" id="renda1000 renda" value="1000">
+                                <label for="renda1000">Até R$ 1000,00</label>
+                            </div>
+                            <div class="form_item_radio">
+                                <input type="radio" name="renda" id="renda2000 renda" value="2000">
+                                <label for="renda2000">Até R$ 2000,00</label>
+                            </div>
+                            <div class="form_item_radio">
+                                <input type="radio" name="renda" id="renda5000 renda" value="5000">
+                                <label for="renda5000">Até R$ 5000,00 ou mais</label>
+                            </div>
+                        </div>
+                        <div class="form_item">
+                            <label for="residencia">Escolha o que mais se encaixa com sua residencia: </label>
+                            <select name="residencia" id="residencia">
+                                <option selected>Selecione uma opção</option>
+                                <option value="casa">Casa</option>
+                                <option value="apartamento">Apartamento</option>
+                                <option value="sitio">Sitio</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="form_item">
-                    <label for="residencia">Escolha o que mais se encaixa com sua residencia: </label>
-                    <select name="residencia" id="residencia">
-                        <option selected>Selecione uma opção</option>
-                        <option value="casa">Casa</option>
-                        <option value="apartamento">Apartamento</option>
-                        <option value="sitio">Sitio</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                </div>
-                <div class="form_item">
-                    <label for="intencao">Por que você quer adotar esse animal?</label>
-                    <textarea name="intencao" id="intencao"></textarea>
+                <div class="form_baixo">
+                    <div class="form_item row">
+                        <label class="text-center" for="intencao">Por que você quer adotar esse animal?</label>
+                        <textarea name="intencao" id="intencao"></textarea>
+                    </div>
                 </div>
                 <div class="form_item">
                     <input type="reset" value="Limpar">
@@ -99,7 +110,7 @@
         </div>
     </main>
 
-    
+
 
     <script src="./js/adotar.js"></script>
     <script src="./js/altera_tema.js"></script>

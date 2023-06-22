@@ -1,23 +1,24 @@
 let formulario = document.querySelector("form")
 
-const check_inputs = (nome, telefone, email,renda,residencia,intencao) => {
+const check_inputs = (nome, telefone, email, renda, residencia, intencao) => {
+    let renda_check = document.querySelector("form_item_radio")
     let control = true;
     if (nome.value.trim() == "") {
         nome.classList.add("erro");
         control = false;
-    }else{
+    } else {
         nome.classList.remove("erro");
     }
     if (telefone.value.trim() == "") {
         telefone.classList.add("erro");
         control = false;
-    }else{
+    } else {
         telefone.classList.remove("erro");
     }
     if (email.value.trim() == "") {
         email.classList.add("erro");
         control = false;
-    }else{
+    } else {
         email.classList.remove("erro");
     }
     return control;
