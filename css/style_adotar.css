@@ -4,7 +4,6 @@
     margin: 0;
     font-size: 18px;
 }
-
 .erro{
     background-color: rgba(255, 0, 0, 0.5);
 }
@@ -17,6 +16,12 @@
     background-color: rgb(250, 235, 247);
     border: 2px dashed rgb(226, 133, 222);
     box-shadow: 0px 2px 5px 3px rgba(255,105,255,0.4);
+}
+.formulario_dark{
+    transition: ease 0.5s;
+    background-color: rgb(15, 0, 17);
+    border: 2px dashed black;
+    color: white;
 }
 .titulo_form{
     font-size: 2.5rem;
@@ -39,5 +44,35 @@ form{
     gap: 1rem;
     transition: ease 0.5s;
     border: 2px dashed rgb(226, 133, 222);
+    box-shadow: 0px 2px 5px 3px rgba(255,105,255,0.4);
+}
+.info_esquerda,.intencao{
+    padding: 0.3rem;
+    outline: 2px dashed rgb(226, 133, 222);
+    border: none;
+}
+.info_esquerda:focus, .intencao:focus{
+    outline: 2px dashed blueviolet;
+}
+.intencao{
+    resize: none;
+}
+.botoes_form{
+    display: flex;
+    gap: 1rem;
+}
+.botao_form{
+    transition: ease 0.2s;
+    padding: 0.3rem;
+    background-color: rgb(226, 133, 222);
+    border: 2px dashed blueviolet;
+    font-weight: bold;
+    color: blueviolet
+}
+.botao_form:hover{
+    transition: ease 0.2s;
+    background-color: blueviolet;
+    border: 2px dashed rgb(226, 133, 222);
+    color: white;
     box-shadow: 0px 2px 5px 3px rgba(255,105,255,0.4);
 }

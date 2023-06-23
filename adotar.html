@@ -48,24 +48,24 @@
         </nav>
     </header>
     <main>
-        <div class="container">
+        <div class="formulario container">
             <h1 class="titulo_form text-center">QUASE LÁ!</h1>
             <h2 class="subtitulo_form text-center">PRECISAMOS DE MAIS INFORMAÇÕES</h2>
             <form action="https://formsubmit.co/pedrovolpattocosta@gmail.com" method="post"
                 class="d-flex flex-column align-items-center justify-content-center">
                 <div class="row form_cima">
                     <div class="form_esquerda col-lg-6 col-12 d-flex flex-column p-3">
-                        <div class="form_item">
+                        <div class="form_item ">
                             <label for="nome">Nome: </label>
-                            <input type="text" name="nome" id="nome">
+                            <input class="info_esquerda" type="text" name="nome" id="nome">
                         </div>
                         <div class="form_item">
                             <label for="telefone">Telefone: </label>
-                            <input type="number" name="telefone" id="telefone">
+                            <input class="info_esquerda" type="number" name="telefone" id="telefone">
                         </div>
                         <div class="form_item">
                             <label for="email">E-Mail: </label>
-                            <input type="email" name="email" id="email">
+                            <input class="info_esquerda" type="email" name="email" id="email">
                         </div>
                     </div>
                     <div class="form_direita col-lg-6 col-12 p-3">
@@ -99,17 +99,35 @@
                 <div class="form_baixo">
                     <div class="form_item row">
                         <label class="text-center" for="intencao">Por que você quer adotar esse animal?</label>
-                        <textarea name="intencao" id="intencao"></textarea>
+                        <textarea class="intencao" name="intencao" id="intencao"></textarea>
                     </div>
                 </div>
-                <div class="form_item">
-                    <input type="reset" value="Limpar">
-                    <input type="submit" value="Enviar">
+                <div class="form_item botoes_form">
+                    <input class="botao_form" type="reset" value="Limpar">
+                    <input class="botao_form" type="submit" value="Enviar">
                 </div>
             </form>
         </div>
     </main>
-
+    <footer id="contato" class=" mt-5 p-3">
+        <div class="rodape container-fluid d-flex flex-column">
+          <div class="row footer_linhas d-flex align-items-center">
+            <div
+              class="local col-lg-6 col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-lg-start">
+              <h5>Alameda Voleio, 352</h5>
+              <h6>Terra do nunca, Acre</h6>
+            </div>
+            <div
+              class="redes col-lg-6 col-12 d-flex flex-column align-items-lg-end align-items-center justify-content-lg-end justify-content-center">
+              <a class="rede" href="http://www.instagram.com">Instagram</a>
+              <a class="rede" href="http://www.twitter.com">Twitter</a>
+            </div>
+          </div>
+          <div class="direitos text-lg-start text-center">
+            <span>© Copyright 2023 - Little Kitty Fantastic - Todos os direitos reservados</span>
+          </div>
+        </div>
+      </footer> 
 
 
     <script src="./js/adotar.js"></script>
