@@ -96,14 +96,13 @@ window.onload = () => {
       } else {
         card.classList.remove("card-dark")
       }
-      
-      card_body.lastElementChild.addEventListener("click",(event) => {
-        event.preventDefault();
-        sessionStorage.setItem("id_animal", card_body.lastElementChild.getAttribute("id_animal"))
-        window.location.href = "../adotar.html"
-      })
     });
-
   });
+  let card_body = document.querySelectorAll(".card-body");
+  card_body.lastElementChild.addEventListener("click",(event) => {
+    event.preventDefault();
+    sessionStorage.setItem("id_animal", card_body.lastElementChild.getAttribute("id_animal"))
+    window.location.href = "  ./adotar.html"
+  })
 };
 

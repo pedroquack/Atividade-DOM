@@ -1,7 +1,6 @@
 let formulario = document.querySelector("form")
 
-const check_inputs = (nome, telefone, email, renda, residencia, intencao) => {
-    let renda_check = document.querySelector("form_item_radio")
+const check_inputs = (nome, telefone, email, intencao) => {
     let control = true;
     if (nome.value.trim() == "") {
         nome.classList.add("erro");
@@ -20,6 +19,10 @@ const check_inputs = (nome, telefone, email, renda, residencia, intencao) => {
         control = false;
     } else {
         email.classList.remove("erro");
+    }
+    if(intencao.value.trim() == ""){
+        intencao.classList.add("erro");
+        control = false;
     }
     return control;
 }
