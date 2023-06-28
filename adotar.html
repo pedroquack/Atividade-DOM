@@ -28,10 +28,10 @@
                 <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
                     <ul class="navbar-nav d-flex align-items-lg-center itens_nav">
                         <li class="nav-item p-2">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item p-2">
-                            <a class="nav-link" href="#bichos">Bichinhos</a>
+                            <a class="nav-link" href="/index.html#bichos">Bichinhos</a>
                         </li>
                         <li class="nav-item p-2">
                             <a class="nav-link" href="#contato">Contato</a>
@@ -48,14 +48,14 @@
         </nav>
     </header>
     <main>
-        <div class="formulario container">
+        <div class="formulario container p-5">
             <h1 class="titulo_form text-center">QUASE LÁ!</h1>
             <h2 class="subtitulo_form text-center">PRECISAMOS DE MAIS INFORMAÇÕES</h2>
             <form action="https://formsubmit.co/pedrovolpattocosta@gmail.com" method="post"
                 class="d-flex flex-column align-items-center justify-content-center">
                 <div class="row form_cima">
-                    <div class="form_esquerda col-lg-6 col-12 d-flex flex-column p-3">
-                        <div class="form_item ">
+                    <div class="form_esquerda col-lg-6 col-12 d-flex flex-column p-3 justify-content-center">
+                        <div class="form_item">
                             <label for="nome">Nome: </label>
                             <input class="info_esquerda" type="text" name="nome" id="nome">
                         </div>
@@ -68,8 +68,8 @@
                             <input class="info_esquerda" type="email" name="email" id="email">
                         </div>
                     </div>
-                    <div class="form_direita col-lg-6 col-12 p-3">
-                        <div class="form_item">
+                    <div class="form_direita col-lg-6 col-12 p-3 d-flex flex-column align-items-lg-start align-items-center">
+                        <div class="form_item area_renda">
                             <span>Informe o que mais se encaixa com sua renda: </span>
                             <div class="form_item_radio">
                                 <input type="radio" name="renda" id="renda1000 renda" value="1000">
@@ -84,10 +84,10 @@
                                 <label for="renda5000">Até R$ 5000,00 ou mais</label>
                             </div>
                         </div>
-                        <div class="form_item">
+                        <div class="form_item d-flex flex-column">
                             <label for="residencia">Escolha o que mais se encaixa com sua residencia: </label>
                             <select name="residencia" id="residencia">
-                                <option selected>Selecione uma opção</option>
+                                <option selected value="">Selecione uma opção</option>
                                 <option value="casa">Casa</option>
                                 <option value="apartamento">Apartamento</option>
                                 <option value="sitio">Sitio</option>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="form_baixo">
-                    <div class="form_item row">
+                    <div class="form_item d-flex flex-column align-items-center">
                         <label class="text-center" for="intencao">Por que você quer adotar esse animal?</label>
                         <textarea class="intencao" name="intencao" id="intencao"></textarea>
                     </div>

@@ -6,9 +6,7 @@
 }
 .erro{
     background-color: rgba(255, 0, 0, 0.5);
-}
-.erro_renda{
-    border: 2px dashed red;
+    border: 2px dashed rgb(206, 0, 0);
 }
 .container{
     padding: 1rem;
@@ -55,7 +53,10 @@ form{
     outline: 2px dashed blueviolet;
 }
 .intencao{
+    transition: ease 0.5s;
     resize: none;
+    width: 35rem;
+    height: 5rem;
 }
 .botoes_form{
     display: flex;
@@ -75,4 +76,21 @@ form{
     border: 2px dashed rgb(226, 133, 222);
     color: white;
     box-shadow: 0px 2px 5px 3px rgba(255,105,255,0.4);
+}
+.campo_obrigatorio{
+    gap: 5px;
+    color: red;
+}
+.campo_obrigatorio img{
+    width: 20px;
+}
+@media(max-width: 780px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .intencao{
+        width: 15rem;
+    }
 }
