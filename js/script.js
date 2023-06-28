@@ -77,7 +77,7 @@ const criacaoPosts = () => {
             <h5 class="card-title text-center">${post.nome}</h5>
             <h6 class="card-sexo text-center">${post.sexo}</h6>
             <p class="card-text">${post.descricao}</p>
-            <a href="../adotar.html" class="botao btn btn-primary" id_animal="${post.id}">Entre em contato</a>
+            <a href="" class="botao btn btn-primary" id_animal="${post.id}">Entre em contato</a>
           </div>
         </div>
     `;
@@ -99,10 +99,15 @@ window.onload = () => {
     });
   });
   let card_body = document.querySelectorAll(".card-body");
-  card_body.lastElementChild.addEventListener("click",(event) => {
-    event.preventDefault();
-    sessionStorage.setItem("id_animal", card_body.lastElementChild.getAttribute("id_animal"))
-    window.location.href = "../adotar.html"
+  card_body.forEach((card) => {
+    card.lastElementChild.addEventListener("click", (event) =>{
+      event.preventDefault();
+      sessionStorage.setItem(
+        "id_animal",
+        card.lastElementChild.getAttribute("id_animal")
+      );
+      window.location.href = "../adotar.html"
+    })
   })
 };
 

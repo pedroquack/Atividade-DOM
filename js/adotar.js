@@ -30,16 +30,16 @@ const check_inputs = (nome, telefone, email,renda,residencia,opcao_residencia,in
     } else {
         email.classList.remove("erro");
     }
-    if(!renda){
+    if(renda == null){
         let area_renda = document.querySelector(".form_item_radio").parentElement
         area_renda.classList.add("erro")
         control = false
-    }else{
-        area_renda.classList.remove("erro_renda")
+        area_renda.innerHTML += obj_obrigatorio;
     }
     if(opcao_residencia.value == ""){
         residencia.classList.add("erro")
         control = false;
+        residencia.parentElement.innerHTML += obj_obrigatorio;
     }else{
         residencia.classList.remove("erro")
     }
@@ -53,6 +53,7 @@ const check_inputs = (nome, telefone, email,renda,residencia,opcao_residencia,in
     return control;
 }
 formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
     let nome = document.querySelector("#nome");
     let telefone = document.querySelector("#telefone");
     let email = document.querySelector("#email");
@@ -60,7 +61,7 @@ formulario.addEventListener("submit", (event) => {
     let residencia = document.querySelector("#residencia");
     let opcao_residencia = residencia.options[residencia.selectedIndex];
     let intencao = document.querySelector("#intencao");
-    if (!check_inputs(nome, telefone, email, renda,residencia,opcao_residencia,intencao)) {
+    if (!check_inputs(nome, telefone, email,renda,residencia,opcao_residencia,intencao)) {
         event.preventDefault();
     } else {
         const adotante = {
@@ -71,7 +72,12 @@ formulario.addEventListener("submit", (event) => {
             renda: renda.value,
             residencia: opcao_residencia.value,
             intencao: intencao.value,
+            animal: sessionStorage.getItem("id_animal")
         };
+
+        const objeto_JSON = JSON.stringify(adotante);
+        console.log(objeto_JSON)
+        
     }
 });
 

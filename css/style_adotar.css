@@ -79,7 +79,8 @@ form{
 }
 .campo_obrigatorio{
     gap: 5px;
-    color: red;
+    color: rgb(121, 0, 0);
+    font-weight: bold;
 }
 .campo_obrigatorio img{
     width: 20px;
