@@ -53,7 +53,6 @@ const check_inputs = (nome, telefone, email,renda,residencia,opcao_residencia,in
     return control;
 }
 formulario.addEventListener("submit", (event) => {
-    event.preventDefault();
     let nome = document.querySelector("#nome");
     let telefone = document.querySelector("#telefone");
     let email = document.querySelector("#email");
