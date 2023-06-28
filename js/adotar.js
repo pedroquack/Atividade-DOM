@@ -1,6 +1,6 @@
 let formulario = document.querySelector("form")
 
-const check_inputs = (nome, telefone, email, intencao) => {
+const check_inputs = (nome, telefone, email,renda) => {
     let control = true;
     if (nome.value.trim() == "") {
         nome.classList.add("erro");
@@ -20,13 +20,8 @@ const check_inputs = (nome, telefone, email, intencao) => {
     } else {
         email.classList.remove("erro");
     }
-    if(intencao.value.trim() == ""){
-        intencao.classList.add("erro");
-        control = false;
-    }
     return control;
 }
-
 formulario.addEventListener("submit", (event) => {
     let nome = document.querySelector("#nome");
     let telefone = document.querySelector("#telefone");
@@ -36,7 +31,7 @@ formulario.addEventListener("submit", (event) => {
     let opcao_residencia = residencia.options[residencia.selectedIndex];
     let intencao = document.querySelector("#intencao");
 
-    if (!check_inputs(nome, telefone, email)) {
+    if (!check_inputs(nome, telefone, email, renda)) {
         event.preventDefault();
     } else {
         const adotante = {
