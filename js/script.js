@@ -98,7 +98,9 @@ window.onload = () => {
       }
     });
   });
+  
   let card_body = document.querySelectorAll(".card-body");
+  console.log(card_body)
   card_body.forEach((card) => {
     card.lastElementChild.addEventListener("click", (event) =>{
       event.preventDefault();
